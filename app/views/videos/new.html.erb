@@ -1,0 +1,13 @@
+<% provide(:title,"Create video") %>
+<h1> Create a video</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@video) do |v| %>
+
+		   <%= v.label :videourl %>
+		   <%= v.text_field :videourl %>
+
+		   <%= v.submit "Create a video", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>

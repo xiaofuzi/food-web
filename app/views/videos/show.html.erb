@@ -1,0 +1,11 @@
+<% provide(:title,'All videos') %>
+<h1>all videos are there.</h1>
+
+<ul class="videos">
+	<% @videos.each do |video| %>
+	  <li>
+	  	<%= image_tag(video.cover, size:"32*32") %>
+	  	<%= link_to video.title, video %>
+	  </li>
+	<% end %>
+</ul>

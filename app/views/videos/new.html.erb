@@ -4,10 +4,13 @@
 	<div class="span6 offset3">
 		<%= form_for(@video) do |v| %>
 
+		   <%= v.label :title %>
+		   <%= v.text_field :title %>
+
 		   <%= v.label :videourl %>
 		   <%= v.text_field :videourl %>
 
-		   <%= v.submit "Create a video", class: "btn btn-large btn-primary" %>
+		   <%= v.submit "Create a video", class: "btn  btn-primary" %>
 		<% end %>
 	</div>
 </div>

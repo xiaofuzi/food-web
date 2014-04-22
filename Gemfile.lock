@@ -40,6 +40,13 @@ GEM
     coffee-script-source (1.7.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    getvideo (0.0.5)
+      faraday
+      multi_json
+      multi_xml
+      nokogiri
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.0.6)
@@ -53,8 +60,13 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.3)
     minitest (5.3.3)
     multi_json (1.9.2)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -117,6 +129,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (= 2.3.2.0)
   coffee-rails (~> 4.0.0)
+  getvideo
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.0)

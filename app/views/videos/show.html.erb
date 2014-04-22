@@ -1,11 +1,8 @@
-<% provide(:title,'All videos') %>
+<% provide(:title,@title) %>
 <h1>all videos are there.</h1>
 
-<ul class="videos">
-	<% @videos.each do |video| %>
-	  <li>
-	  	<%= image_tag(video.cover, size:"32*32") %>
-	  	<%= link_to video.title, video %>
-	  </li>
-	<% end %>
-</ul>
+
+<div class="container">
+
+	<embed src="<%= @video.flash %>" allowFullScreen="true" quality="    high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-    flash"></embed>
+</div>

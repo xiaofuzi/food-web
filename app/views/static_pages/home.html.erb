@@ -1,4 +1,4 @@
-<div class="center hero-unit">
+<div class="center main-box">
   <h1>Welcome to the Sample App</h1>
 
   <h2>
@@ -6,7 +6,20 @@
     <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
     sample application.
   </h2>
-
+  <div class="row">
+   
+	<% @videos.each do |video| %>
+	  <div class="span3 box">
+	  <div class="inner-box">
+	  	<%= link_to image_tag(video.cover,size: "180x100", :alt => video.title) , video %>
+	  	<div class="bottom-box">
+	  	    <p ><%= link_to video.title, video %></p>
+	  	</div>
+	  </div>
+	  </div>
+	<% end %>
+	
+</div>
   <%= link_to "create a video now!", new_video_path, class: "btn btn-large btn-primary" %>
   <%= link_to "watch a video now!", videos_path, class: "btn btn-large btn-primary" %>
 </div>

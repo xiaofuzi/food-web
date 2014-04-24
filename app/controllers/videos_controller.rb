@@ -4,7 +4,7 @@ class VideosController < ApplicationController
 	end
 
 	def index
-		@videos = Video.all
+		@videos = Video.paginate(page: params[:page],per_page: 12)
 	end
     
     def show

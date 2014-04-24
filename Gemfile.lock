@@ -30,6 +30,8 @@ GEM
     arel (5.0.1.20140414130214)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -122,12 +124,14 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootstrap-sass (= 2.3.2.0)
+  bootstrap-will_paginate
   coffee-rails (~> 4.0.0)
   getvideo
   jbuilder (~> 2.0)
@@ -139,3 +143,4 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate

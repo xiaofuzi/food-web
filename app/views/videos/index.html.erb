@@ -1,11 +1,18 @@
 <% provide(:title,'All videos') %>
-<h1>all videos are there.</h1>
-
+<div class=main-box>
 <div class="row">
+   
 	<% @videos.each do |video| %>
 	  <div class="span3 box">
+	  <div class="inner-box">
 	  	<%= link_to image_tag(video.cover,size: "180x100", :alt => video.title) , video %>
-	  	<p ><%= link_to video.title, video %></p>
+	  	<div class="bottom-box">
+	  	    <p ><%= link_to video.title, video %></p>
+	  	</div>
+	  </div>
 	  </div>
 	<% end %>
+	
+</div>
+<%= will_paginate %>
 </div>

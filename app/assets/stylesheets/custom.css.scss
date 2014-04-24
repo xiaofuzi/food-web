@@ -26,6 +26,25 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
 /*video look*/
 .box {
     background-color: white;
@@ -47,7 +66,7 @@ p {
 
 .main-box {
   background-color: white;
-  padding: 100px 0 0 20px;
+  padding: 100px 0 100px 20px;
 }
 
 .play-box {
@@ -55,7 +74,14 @@ p {
   padding:100px 10px 100px 10px;
   margin: 0px 10px 0px 10px;
 }
+
+.foot-box {
+  background-color: black;
+}
 /*back-ground*/
 body{
   background-color :gray;
+  margin: 0 0 0 0;
+  padding:0 0 0 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.07);
 }

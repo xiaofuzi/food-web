@@ -7,5 +7,13 @@ module ApplicationHelper
     else
       "#{base_title} | #{page_title}"                 # 字符串插值
     end
-  end
+    end
+
+    def user_is_admin(user)
+    	if user.id < 5
+    		return true
+    	else
+    		return false
+    	end
+    end
 end

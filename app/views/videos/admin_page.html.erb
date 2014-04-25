@@ -1,0 +1,17 @@
+<div class="main-box">
+	<div class="row">
+   
+	<% @videos.each do |video| %>
+	    <ol>
+	        <li>
+	  	        <p ><%= link_to video.title, video %></p>
+	  	        <%= video.created_at %>
+	  	       
+	  	        <br/>
+	        </li>  	
+	  	</ol>
+	<% end %>
+	
+    </div>
+<%= will_paginate %>
+</div>

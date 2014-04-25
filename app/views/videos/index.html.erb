@@ -7,7 +7,14 @@
 	  <div class="inner-box">
 	  	<%= link_to image_tag(video.cover,size: "180x100", :alt => video.title) , video %>
 	  	<div class="bottom-box">
-	  	    <p ><%= link_to video.title, video %></p>
+	  	    
+	  	    <% if user_is_admin(current_user) == true %>
+	  	        <h5 ><%= link_to video.title, video %></h5>
+                <p><%= link_to "delete", video, method: :delete,
+                                  data: { confirm: "Are you sure?" } %> </p>
+            <% else %>
+                <p ><%= link_to video.title, video %></p>
+            <% end %>
 	  	</div>
 	  </div>
 	  </div>

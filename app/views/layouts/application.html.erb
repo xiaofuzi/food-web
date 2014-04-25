@@ -13,12 +13,14 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
+    <div class="flash">
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
-      <%= yield %>
-      
     </div>
-    <%= render 'layouts/fooder' %>
+      <%= yield %>
+     <%= render 'layouts/fooder' %>  
+    </div>
+   
   </body>
 </html>

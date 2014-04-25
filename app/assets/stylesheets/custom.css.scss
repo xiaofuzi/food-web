@@ -33,17 +33,21 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: brown;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 50px;
 }
 
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+#navbar {
+  padding-top: 10px;
 }
 /*video look*/
 .box {
@@ -67,16 +71,24 @@ p {
 .main-box {
   background-color: white;
   padding: 100px 0 100px 20px;
+  margin: 0px 0px 0px 0px;
 }
 
 .play-box {
   background-color: white;
   padding:100px 10px 100px 10px;
-  margin: 0px 10px 0px 10px;
+  margin: 50px 10px 0px 10px;
 }
 
 .foot-box {
-  background-color: black;
+  background-color: #E6E6FA;
+  
+  padding: 25px 0 0 0;
+}
+
+.flash {
+  margin:60px 0 -40px 0;
+
 }
 /*back-ground*/
 body{

@@ -1,0 +1,20 @@
+<% provide(:title,'All food menus') %>
+<div class="main-box">
+<div class="row">
+    <div class="box">
+	<% @foods.each do |food| %>
+	  <div class="col-md-3">
+	  <div class="inner-box">
+	  	<%= link_to image_tag(food.cover,size: "180x100", :alt => food.name) , food %>
+	  	
+	  	    <div class="bottom-box">
+                <p ><%= link_to food.name, food %></p>
+            
+            </div>
+	  	</div>
+	  </div>
+	<% end %>
+   	</div>
+</div>
+<%= will_paginate %>
+</div>

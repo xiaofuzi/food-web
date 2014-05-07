@@ -1,31 +1,68 @@
 <div class="center main-box">
-  <h1>Welcome to the Guangchangwu web,enjoy yourself!</h1>
+  <h1>Welcome to the food web,enjoy yourself!</h1>
 
   
   <div class="row">
-   
-	<% @videos.each do |video| %>
+    <div class="guizhou ">
+        <div class="">
+           <h1 class="text-left food-head" >Guizhou foods</h1>
+           <h2 class="text-right"></h2>
+        </div>
+        <div>
+	<% @food_guizhou.each do |f| %>
 	 
-	  <div class=" col-sm-4">
-	  <div class="effect-box">
+	  <div class=" col-sm-3">
+	  
 	      <!-- normal -->
-    <div class="ih-item square effect6 top_to_bottom"><a href="#">
-        <div class="img"><img  src="<%= video.cover %>" width="18" height="10" alt="img"></div>
+    <div class="ih-item square effect6 ">
+    <a href="foods/<%= f.id %>">
+        <div class="img"><img  src="<%= f.cover %>" width="18" height="10" alt="img"></div>
         <div class="info">
-          <h3>Heading here</h3>
-          <p>Description goes here</p>
+          <h3><%= f.name %></h3>
+          <p><%= f.description %></p>
         </div></a></div>
     <!-- end normal -->
-	  	<div class="bottom-box">
-	  	    <p ><%= link_to video.title, video %></p>
-	  	</div>
-	  </div>
-	  </div>
-
-	
+	  	
+	  
+	  
+    <div class="bottom-box">
+	  	    <p ><%= link_to f.name, f %></p>
+	</div> 
+	</div>
 	<% end %>
-	
-</div>
+	</div>
+	    </div>
+	    <div class="sichuan">
+	    	<div class="">
+           <h1 class="text-left food-head" >Sichuan foods</h1>
+           <h2 class="text-right"></h2>
+        </div>
+        <div>
+	<% @food_sichuan.each do |f| %>
+	 
+	  <div class=" col-sm-3">
+	  
+	      <!-- normal -->
+    <div class="ih-item square effect6 ">
+    <a href="foods/<%= f.id %>">
+        <div class="img"><img  src="<%= f.cover %>" width="18" height="10" alt="img"></div>
+        <div class="info">
+          <h3><%= f.name %></h3>
+          <p><%= f.description %></p>
+        </div></a></div>
+    <!-- end normal -->
+	  	
+	  
+	  
+    <div class="bottom-box">
+	  	    <p ><%= link_to f.name, f %></p>
+	</div> 
+	</div>
+	<% end %>
+	</div>
+	    </div>
+   </div>
+<%= link_to "create a food menu now!", new_food_path, class: "btn  btn-primary" %>
 <% if user_signed_in? %>
   <%= link_to "create a video now!", new_video_path, class: "btn  btn-primary" %>
   

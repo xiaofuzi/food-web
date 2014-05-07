@@ -1,13 +1,13 @@
 <% provide(:title,'All videos') %>
-<div class=main-box>
+<div class="main-box">
 <div class="row">
-   
+    <div class="box">
 	<% @videos.each do |video| %>
-	  <div class="span3 box">
+	  <div class="col-md-3">
 	  <div class="inner-box">
 	  	<%= link_to image_tag(video.cover,size: "180x100", :alt => video.title) , video %>
-	  	<div class="bottom-box">
-	  	    
+	  	
+	  	    <div class="bottom-box">
 	  	    <% if user_signed_in? && user_is_admin(current_user) == true %>
 	  	        <h5 ><%= link_to video.title, video %></h5>
                 <p><%= link_to "delete", video, method: :delete,
@@ -15,11 +15,11 @@
             <% else %>
                 <p ><%= link_to video.title, video %></p>
             <% end %>
+            </div>
 	  	</div>
 	  </div>
-	  </div>
 	<% end %>
-	
+   	</div>
 </div>
 <%= will_paginate %>
 </div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'static_pages#home'
   resources :videos
- 
+  resources :comments, only: [:create, :destroy]
   
  
   match '/help',    to: 'static_pages#help',    via: 'get'

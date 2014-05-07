@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-#source 'http://ruby.taobao.org'
+#source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -40,8 +40,8 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'bootstrap3-rails'
 
-gem 'bootstrap-sass', '2.3.2.0'
 gem 'getvideo'
 
 gem 'will_paginate'

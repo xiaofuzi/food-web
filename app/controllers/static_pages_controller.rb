@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-  	@videos = Video.limit(8)
+  	@videos = Video.limit(9)
   end
 
   def help

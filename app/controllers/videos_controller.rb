@@ -12,6 +12,8 @@ class VideosController < ApplicationController
     	@video = Video.find(params[:id])
         #@video.get_video_params
     	@title = @video.title
+        @comments = @video.comments.paginate(page: params[:page])
+        @comment = current_user.comments.build if user_signed_in?
     end
 
 	def create

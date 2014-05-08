@@ -24,8 +24,10 @@
            </div>
            <div>
 		   <%= v.label :cook %><br />
-		   <%= v.text_field :cook %>
+		   
+		   <%= v.kindeditor :cook, :width => 600, :height => 300, :simple_mode => true %>
            </div><br />
+         
            <div class="center">
 		   <%= v.submit "Create a food menu", class: "btn  btn-primary" %>
 		   </div>
@@ -33,3 +35,4 @@
 	</div>
 </div>
 </div>
+

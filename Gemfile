@@ -54,3 +54,5 @@ group :production do
   gem 'rails_12factor'
 
 end
+#wenbenbianjiqi
+ gem 'rails_kindeditor'

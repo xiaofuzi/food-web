@@ -3,6 +3,27 @@
 
   
   <div class="row">
+  <div>
+  <% @videos.each do |video| %>
+	 
+	  <div class=" col-sm-3">
+	  <div class="effect-box">
+	      <!-- normal -->
+    <div class="ih-item square effect6 top_to_bottom"><a href="#">
+        <div class="img"><img  src="<%= video.cover %>"  alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+    <!-- end normal -->
+	  	<div class="bottom-box">
+	  	    <p ><%= link_to video.title, video %></p>
+	  	</div>
+	  </div>
+	  </div>
+    <% end %>
+    </div>
+
     <div class="guizhou ">
         <div class="">
            <h1 class="text-left food-head" >Guizhou foods</h1>

@@ -92,7 +92,7 @@ p {
 }
 /*back-ground*/
 body{
-  background-color :gray;
+  
   margin: 0 0 0 0;
   padding:0 0 0 0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.07);
@@ -109,6 +109,32 @@ body{
   padding:10px 0 0 20px;
 }
 
-.food-head {
-  color:green;
+
+
+.home-play-box {
+  
+  margin: -48px 0 10px 0;
 }
+
+.top-list {
+   float: left;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: brown;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 30px
+}
+
+.top-head {
+  margin: 0 0 0px 10px;
+  color: green;
+}
+.area-head {
+  margin: 0 0 0px 0px;
+ color:white;
+}
+
+.carousel-inner > .item > img{ width:800px; height:420px; }

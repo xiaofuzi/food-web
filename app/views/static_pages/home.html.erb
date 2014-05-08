@@ -1,8 +1,74 @@
 <div class="center main-box">
-  <h1>Welcome to the food web,enjoy yourself!</h1>
-
   
+ <div class=" row home-play-box">
+
+  <div class="col-md-3">
+    	<div class="btn btn-warning">
+    	    <div class="row top-head top-list"><div class="col-md-8 ">精彩菜单</div>
+    	    <div class="col-md-4"><%= link_to 'more',foods_path %></div></div>
+    	</div>
+    	<div class="top-list">
+    	    <ol>
+    	    <% @foods.each do |f| %>
+    	    <li><%= link_to truncate(f.name,length:12), f %></li>
+    	   
+    	    <% end %>
+    	    </ol>
+    	    
+    	</div> 
+    	
+    </div>
+
+  <div class="col-md-9" id="slider-img">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="<%= @foods.first.cover %>" alt="...">
+
+      <div class="carousel-caption">
+        <h1><%= link_to @foods.first.name ,@foods.first %></h1>
+        <p><%= truncate(@foods.first.description,length:50) %></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="<%= @foods.second.cover %>" alt="...">
+      <div class="carousel-caption">
+        <h1><%= link_to @foods.second.name ,@foods.second %></h1>
+        <p><%= truncate(@foods.second.description,length:50) %></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="<%= @foods.third.cover %>" alt="...">
+      <div class="carousel-caption">
+        <h1><%= link_to @foods.third.name, @foods.third %></h1>
+        <p><%= truncate(@foods.third.description,length:50) %></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+</div>	
+</div>   
+
+
   <div class="row">
+  <div class="btn btn-success btn-block">Food videos</div>
   <div>
   <% @videos.each do |video| %>
 	 
@@ -12,8 +78,9 @@
     <div class="ih-item square effect6 top_to_bottom"><a href="#">
         <div class="img"><img  src="<%= video.cover %>"  alt="img"></div>
         <div class="info">
-          <h3>Heading here</h3>
-          <p>Description goes here</p>
+          <h3><%= video.title %></h3>
+         
+          <p><%= video.created_at %></p>
         </div></a></div>
     <!-- end normal -->
 	  	<div class="bottom-box">
@@ -24,20 +91,33 @@
     <% end %>
     </div>
 
-    <div class="guizhou ">
-        <div class="">
-           <h1 class="text-left food-head" >Guizhou foods</h1>
-           <h2 class="text-right"></h2>
+    
+	    
+    <div >
+    <% @all_area_foods.each do |ff| %>
+    <% if !ff.nil? %>
+        <% ff.each do |f| %>
+           
+          
+              <% @fa = f.area %>
+        <% end %>
+       
+       
+	    <div class="row">
+        <div class="col-md-12">
+           <div class="btn btn-warning  area-head top-list" ><%= @fa   %> foods</div>
+           
         </div>
-        <div>
-	<% @food_guizhou.each do |f| %>
+        </div>
+        <div class="row">
+	<% ff.each do |f| %>
 	 
 	  <div class=" col-sm-3">
 	  
 	      <!-- normal -->
     <div class="ih-item square effect6 ">
     <a href="foods/<%= f.id %>">
-        <div class="img"><img  src="<%= f.cover %>" width="18" height="10" alt="img"></div>
+        <div class="img"><img  src="<%= f.cover %>"  alt="img"></div>
         <div class="info">
           <h3><%= f.name %></h3>
           <p><%= f.description %></p>
@@ -52,36 +132,9 @@
 	</div>
 	<% end %>
 	</div>
-	    </div>
-	    <div class="sichuan">
-	    	<div class="">
-           <h1 class="text-left food-head" >Sichuan foods</h1>
-           <h2 class="text-right"></h2>
-        </div>
-        <div>
-	<% @food_sichuan.each do |f| %>
-	 
-	  <div class=" col-sm-3">
-	  
-	      <!-- normal -->
-    <div class="ih-item square effect6 ">
-    <a href="foods/<%= f.id %>">
-        <div class="img"><img  src="<%= f.cover %>" width="18" height="10" alt="img"></div>
-        <div class="info">
-          <h3><%= f.name %></h3>
-          <p><%= f.description %></p>
-        </div></a></div>
-    <!-- end normal -->
-	  	
-	  
-	  
-    <div class="bottom-box">
-	  	    <p ><%= link_to f.name, f %></p>
-	</div> 
-	</div>
+	<% end %>
 	<% end %>
 	</div>
-	    </div>
    </div>
 <%= link_to "create a food menu now!", new_food_path, class: "btn  btn-primary" %>
 <% if user_signed_in? %>

@@ -9,10 +9,14 @@ class FoodsController < ApplicationController
 
 	def show
 		@food = Food.find(params[:id])
+		@foods= Food.limit(8).where(area:@food.area)
 	end
 
 	def create
 		@food = Food.new(food_params)
+		  if user_signed_in? 
+		     @food.user_id = current_user.id
+		  end
 		if @food.save
 			redirect_to root_path
 		else

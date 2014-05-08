@@ -1,13 +1,53 @@
 <div class="main-box">
-	<div ><h1 class="text-left"><%= @food.name %></h1></div>
-	<div>
-	   <%= link_to image_tag(@food.cover,size: "580x400", :alt => @food.name) , @food %>
-	</div>
-	<div>
-	   <p><%= @food.description %></p>
-	</div>
-	<div>
-		<%= raw @food.cook %>
+    <div class="row">
+        <div class= "col-md-8">
+	        <div ><h1 class="text-left"><%= @food.name %></h1></div>
+	   
+	    <%= link_to image_tag(@food.cover,size: "580x400", :alt => @food.name) , @food %>
+	    <% if @food.user!= nil %>
+	        <div class="btn btn-info">user:<%= @food.user_name %></div>
+	    <% end %>
+	    <div class="btn btn-info">Created at <%= @food.created_at %></div>
+	    <div class="row">
+	    <div class= "col-md-10">
+           <div>
+	         <p><%= @food.description %></p>
+	       </div>
+	    
+		    <%= raw @food.cook %>
 		
-	</div>
+	    </div>
+	    
+		<div id="SOHUCS"></div>
+<script>
+  (function(){
+    var appid = 'cyqJ2HyrW',
+    conf = 'prod_78b9cab19959e4af8ff46156ee460c74';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>        
+	
+        </div>
+        </div>
+   <div class="col-md-4">
+   	   <% @foods.each do |food| %>
+   	       <div class="inner-box">
+   	       <% if food.id != @food.id %>
+	  	<%= link_to image_tag(food.cover,size: "180x100", :alt => food.name) , food %>
+	  	
+	  	    <div class="bottom-box">
+                <p ><%= link_to truncate(food.name,length:20), food %></p>
+            
+            </div>
+	  	<% end %>
+	  	</div>
+   	   <% end %>
+   </div>
 </div>

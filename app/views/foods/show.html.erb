@@ -5,7 +5,7 @@
 	   
 	    <%= link_to image_tag(@food.cover,size: "580x400", :alt => @food.name) , @food %>
 	    <% if @food.user!= nil %>
-	        <div class="btn btn-info">user:<%= @food.user_name %></div>
+	        <div class="btn btn-info">user:<%= @food.user.user_name %></div>
 	    <% end %>
 	    <div class="btn btn-info">Created at <%= @food.created_at %></div>
 	    <div class="row">

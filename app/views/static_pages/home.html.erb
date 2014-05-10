@@ -69,14 +69,16 @@
 
 
   <div class="row">
-  <div class="btn btn-success btn-block">Food videos</div>
+  <div class=" row  btn btn-success btn-block" >
+   
+  <div ><p class="col-md-8 text-left">Food videos</p><p class="col-md-4 text-right"> <%= link_to "more",videos_path %></p></div></div>
   <div>
   <% @videos.each do |video| %>
 	 
 	  <div class=" col-sm-3">
 	  <div class="effect-box">
 	      <!-- normal -->
-    <div class="ih-item square effect6 top_to_bottom"><a href="#">
+    <div class="ih-item square effect6 top_to_bottom"><a href="videos/<%= video.id %>">
         <div class="img"><img  src="<%= video.cover %>"  alt="img"></div>
         <div class="info">
           <h3><%= video.title %></h3>

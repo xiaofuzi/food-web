@@ -33,7 +33,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: brown;
+  color: gray;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -138,3 +138,15 @@ body{
 }
 
 .carousel-inner > .item > img{ width:800px; height:420px; }
+
+.update-box {
+    background-color: #E6E6FA;
+    border-radius: 3px;
+    box-shadow: 0 0 2px gray;
+    margin: 0 0 20px 0px;
+    padding: 10px;
+}
+.user-show-box {
+  background-color: #E6E6FA;
+ 
+}

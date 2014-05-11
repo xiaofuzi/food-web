@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508110652) do
+ActiveRecord::Schema.define(version: 20140511122458) do
 
   create_table "comments", force: true do |t|
     t.string   "content"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140508110652) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "videourl"
+    t.integer  "user_id"
   end
 
 end

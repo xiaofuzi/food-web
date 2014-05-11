@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def full_title(page_title)                          # 方法定义
-    base_title = "Delicious menus |"  # 变量赋值
+    base_title = "Delicious foods |"  # 变量赋值
     if page_title.empty?                              # 布尔测试
       base_title                                      # 非显式返回值
     else

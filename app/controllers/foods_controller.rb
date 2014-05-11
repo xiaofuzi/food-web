@@ -23,7 +23,27 @@ class FoodsController < ApplicationController
 			render new
 		end
 	end
+    
+    def edit
+        @food = Food.find(params[:id])
+    end
+    def update
+    	@food = Food.find(params[:id])
+    	
+    	if @food.update_attributes(food_params)
+           # Handle a successful update.
+           flash[:success] = "food menu updated"
+           redirect_to @food
+        else
+           render 'edit'
+        end
+    end
 
+    def destroy
+    	Food.find(params[:id]).destroy
+        flash[:success] = "Food destroyed."
+        redirect_to videos_url
+    end
 private
     def food_params
       params.require(:food).permit(:name,:area,:cover,:description,:cook)

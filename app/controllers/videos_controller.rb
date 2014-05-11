@@ -26,6 +26,9 @@ class VideosController < ApplicationController
            @video.cover = new_video.cover
 
         end
+        if current_user.user_name?
+            @video.user_id = current_user.id
+        end
     if  @video.save
         flash[:success] = "Create a video sucessfully!"
         redirect_to root_path

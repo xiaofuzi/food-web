@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
   	@videos = Video.limit(4)
-  	@foods  = Food.limit(10).all
+  	@foods  = Food.limit(15).all
     
     
   	@food_guizhou = Food.limit(4).where(area:"guizhou")

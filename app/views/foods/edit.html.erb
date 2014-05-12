@@ -1,29 +1,33 @@
 <% provide(:title,"Update a food menu") %>
 <div class="main-box">
-<h1> Update a food menu </h1>
+<h1> 食谱信息更改 </h1>
 <div class="row">
-	<div class="col-md-offset-4">
+	<div class="col-md-offset-4 col-md-4">
 		<%= form_for(@food) do |v| %>
 
 		  
-           <div>
-		   <%= v.label :Name %><br />
-		   <%= v.text_field :name %>
+         
+           <div class="input-group">
+		   <span class="input-group-addon"><%= v.label :用户名称 %></span>
+		   <%= v.text_field :name ,class:"form-control"%>
            </div>
            <div>
-		   <%= v.label :area %><br />
-		   <%= v.text_field :area %>
+		   <div class="input-group">
+		   <span class="input-group-addon"><%= v.label :省市地区 %></span>
+		   <%= v.text_field :area,class:"form-control" %>
            </div>
            <div>
-		   <%= v.label :cover %><br />
-		   <%= v.text_field :cover %>
+		   <div class="input-group">
+		   <span class="input-group-addon"><%= v.label :插图链接 %></span>
+		   <%= v.text_field :cover,class:"form-control" %>
            </div>
            <div>
-		   <%= v.label :description %><br />
-		   <%= v.text_field :description %>
+		   <div class="input-group">
+		   <span class="input-group-addon"><%= v.label :描述信息 %></span>
+		   <%= v.text_field :description ,class:"form-control"%>
            </div>
            <div>
-		   <%= v.label :cook %><br />
+		   <%= v.label :制作说明 %><br />
 		   
 		   <%= v.kindeditor :cook, :width => 600, :height => 300, :simple_mode => true %>
            </div><br />

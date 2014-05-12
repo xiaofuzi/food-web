@@ -3753,6 +3753,8 @@
 
 .ih-item.square.effect12 {
   overflow: hidden;
+   height:180px;
+   width:240px;
 }
 .ih-item.square.effect12.colored .info {
   background: #1a4a72;

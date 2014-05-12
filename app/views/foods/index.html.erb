@@ -7,8 +7,14 @@
 	  <div class="inner-box">
 	  	<%= link_to image_tag(food.cover,size: "180x100", :alt => food.name) , food %>
 	  	
-	  	    <div class="bottom-box">
+	  	    <div class="bottom-box">                  
+	  	    <% if user_signed_in? && user_is_admin(current_user) == true %>
+	  	        <h5 ><%= link_to food.name, food%></h5>
+                <p><%= link_to "delete", food, method: :delete,
+                                  data: { confirm: "Are you sure?" } %> </p>
+            <% else %>
                 <p ><%= link_to food.name, food %></p>
+            <% end %>
             
             </div>
 	  	</div>
@@ -18,3 +24,4 @@
 </div>
 <%= will_paginate %>
 </div>
+ 

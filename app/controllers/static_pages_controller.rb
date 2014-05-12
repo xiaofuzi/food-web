@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
   	@food_sichuan = Food.limit(4).where(area:"sichuan")
   	@food_guangzhou = Food.limit(4).where(area:"guangzhou")
   	@food_shanxi = Food.limit(4).where(area:"shanxi")
-  	@food_aihui = Food.limit(4).where(area:"aihui")
+  	@food_aihui = Food.limit(4).where(area:"fujian")
   	@food_xianggang = Food.limit(4).where(area:"xianggang")
   	@food_beijing = Food.limit(4).where(area:"beijing")
   	

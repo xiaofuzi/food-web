@@ -2,15 +2,15 @@
   
  <div class=" row home-play-box">
 
-  <div class="col-md-3">
+  <div class="col-xs-3">
     	<div class="">
-    	    <div class="row top-head top-list"><div class="col-md-8 ">精彩菜单</div>
-    	    <div class="col-md-4"><%= link_to 'more',foods_path %></div></div>
+    	    <div class="row top-head top-list"><div class="col-xs-8 ">精彩菜单</div>
+    	    <div class="col-xs-4"><%= link_to 'more',foods_path %></div></div>
     	</div>
     	<div class="top-list">
     	    <ol>
     	    <% @foods.each do |f| %>
-    	    <li><%= link_to truncate(f.name,length:12), f %></li>
+    	    <li><%= link_to truncate(f.name,length:10), f %></li>
     	   
     	    <% end %>
     	    </ol>
@@ -19,7 +19,7 @@
     	
     </div>
   <% if @foods.third != nil %>
-  <div class="col-md-9" id="slider-img">
+  <div class="col-xs-9" id="slider-img">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -87,11 +87,11 @@
   <div class="row">
   <div class=" row  " >
    
-  <div ><h2 class="col-md-10 text-left">食谱视频</h2><h2 class="col-md-2 "> <%= link_to "更多",videos_path %></h2></div></div>
+  <div ><h2 class="col-xs-10 text-left">食谱视频</h2><h2 class="col-xs-2 "> <%= link_to "更多",videos_path %></h2></div></div>
   <div>
   <% @videos.each do |video| %>
 	 
-	  <div class=" col-sm-3">
+	  <div class=" col-xs-3">
 
 	  
 
@@ -127,7 +127,7 @@
        
        
 	    <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
            <div class="  area-head top-list" ><%= @fa   %> 食谱</div>
            
         </div>
@@ -135,7 +135,7 @@
         <div class="row">
 	<% ff.each do |f| %>
 	 
-	  <div class=" col-sm-3">
+	  <div class=" col-xs-3">
 	  
 	      <!-- normal -->
     <div class="ih-item square effect6 ">

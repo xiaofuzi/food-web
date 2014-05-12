@@ -1,16 +1,16 @@
 <% provide(:title,"Create video") %>
 <div class="main-box">
-<h1> Create a video</h1>
+<h1> 发布视频</h1>
 <div class="row">
-	<div class="span6 offset4">
+	<div class="col-md-offset-4">
 		<%= form_for(@video) do |v| %>
 
-		  
-           <div>
-		   <%= v.label :videourl %>
-		   <%= v.text_field :videourl %>
+		  <div class="input-group col-md-8">
+		   <span class="input-group-addon"><%= v.label :videourl %></span>
+		   <%= v.text_field :videourl ,class:"form-control"%>
            </div>
-           <div class="center">
+           
+           <div >
 		   <%= v.submit "Create a video", class: "btn  btn-primary" %>
 		   </div>
 		<% end %>

@@ -1,11 +1,38 @@
 <% provide(:title,'All food menus') %>
 <div class="main-box">
+<div class="row tags">
+  
+    <div  class="col-xs-1 ">
+        <p class=" btn btn-success btn-sm"><%= link_to "贵州",area_path("guizhou"),id:"tag-class" %></p>
+    </div>
+   <div class="col-xs-1">
+        <p class="btn btn-success btn-sm"><%= link_to "北京",area_path("beijing"),id:"tag-class"  %></p>
+    </div>
+    <div class="col-xs-1">
+        <p  class="btn btn-success btn-sm"><%= link_to "四川",area_path("sichuan"),id:"tag-class"  %></p>
+    </div>
+    <div class="col-xs-1 ">
+        <p class="btn btn-success btn-sm"><%= link_to "香港",area_path("xianggang"),id:"tag-class" %></p>
+    </div>
+    <div class="col-xs-1 ">
+        <p class="btn btn-success btn-sm"><%= link_to "福建",area_path("fujian"),id:"tag-class" %></p>
+    </div>
+    <div class="col-xs-1">
+        <p class="btn btn-success btn-sm"><%= link_to "陕西",area_path("shanxi") ,id:"tag-class"%></p>
+    </div>
+    <div class="col-xs-1">
+        <p class="btn btn-success btn-sm"><%= link_to "广州",area_path("guangzhou") ,id:"tag-class"%></p>
+    </div>
+    <div class="col-xs-1">
+        <p class="btn btn-success btn-sm"><%= link_to "所有地区",foods_path ,id:"tag-class"%></p>
+    </div>
+</div>
 <div class="row">
     <div class="box">
 	<% @foods.each do |food| %>
-	  <div class="col-md-3">
+	  <div class="col-xs-3">
 	  <div class="inner-box">
-	  	<%= link_to image_tag(food.cover,size: "180x100", :alt => food.name) , food %>
+	  	<%= link_to image_tag(food.cover,size: "220x150", :alt => food.name) , food %>
 	  	
 	  	    <div class="bottom-box">                  
 	  	    <% if user_signed_in? && user_is_admin(current_user) == true %>

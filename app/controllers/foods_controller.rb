@@ -1,6 +1,15 @@
 class FoodsController < ApplicationController
 	def index
-		@foods = Food.paginate(page: params[:page],per_page: 16)
+    #@tag = Tag.find(params[:tag_id]) if params[:tag_id]
+    #@areas =[["guizhou","贵州"],["beijing","北京"],["sichuan","四川"],["fujian","福建"],["shanxi","陕西"],["guangzhou","广州"],["xianggang","香港"]]
+    
+    if params[:area]
+      areafood = Food.tagged_with(params[:area])
+		  @foods = areafood.paginate(page: params[:page],per_page: 16)
+    else
+      @foods = Food.paginate(page: params[:page],per_page: 16)
+    end
+    
 	end
 
 	def new

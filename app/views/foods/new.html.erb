@@ -16,7 +16,10 @@
 		   <span class="input-group-addon"><%= v.label :省市地区 %></span>
 		   <%= v.text_field :area,class:"form-control",:placeholder => "guizhou shanxi beijing fujian xianggang sichuan" %>
            </div>
-           
+           <div class="input-group">
+		   <span class="input-group-addon"><%= v.label :Tags %></span>
+		   <%= v.text_field :area_list,class:"form-control",:placeholder => "seprate with conmma" %>
+           </div>
 		   <div class="input-group">
 		   <span class="input-group-addon"><%= v.label :插图链接 %></span>
 		   <%= v.text_field :cover,class:"form-control",:placeholder => "http://...." %>

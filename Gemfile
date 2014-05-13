@@ -56,3 +56,4 @@ group :production do
 end
 #wenbenbianjiqi
  gem 'rails_kindeditor'
+ gem 'acts-as-taggable-on'

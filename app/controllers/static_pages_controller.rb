@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    
   	@videos = Video.limit(4)
   	@foods  = Food.limit(15).all
     

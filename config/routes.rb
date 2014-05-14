@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   
   devise_for :users
-  root to: 'static_pages#index'
+  root to: 'static_pages#home'
   resources :videos,:users
   resources :comments, only: [:create, :destroy]
   resources :foods 
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
  
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/home', to: 'static_pages#home', via: 'get'
+  match '/welcome', to: 'static_pages#welcome', via: 'get'
   get 'foods/area/:area',to:'foods#index', as: 'area'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -26,6 +26,7 @@ class FoodsController < ApplicationController
 		  if user_signed_in? 
 		     @food.user_id = current_user.id
 		  end
+      @food.area_list.add(@food.area)
 		if @food.save
 			redirect_to root_path
 		else
@@ -51,7 +52,7 @@ class FoodsController < ApplicationController
     def destroy
     	Food.find(params[:id]).destroy
         flash[:success] = "Food destroyed."
-        redirect_to videos_url
+        redirect_to foods_url
     end
 private
     def food_params

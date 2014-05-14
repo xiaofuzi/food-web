@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :comments, only: [:create, :destroy]
   resources :foods 
  
- 
+  match '/home',    to: 'static_pages#home',    via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/welcome', to: 'static_pages#welcome', via: 'get'

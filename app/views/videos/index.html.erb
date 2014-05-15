@@ -3,9 +3,9 @@
 <div class="row">
     <div class="box">
 	<% @videos.each do |video| %>
-	  <div class="col-md-3">
+	  <div class="col-xs-3">
 	  <div class="inner-box">
-	  	<%= link_to image_tag(video.cover,size: "220x150", :alt => video.title) , video %>
+	  	<%= link_to image_tag(video.cover, :alt => video.title) , video %>
 	  	
 	  	    <div class="bottom-box">
 	  	    <% if user_signed_in? && user_is_admin(current_user) == true %>

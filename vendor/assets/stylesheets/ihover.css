@@ -62,8 +62,7 @@
 
 .ih-item.square {
   position: relative;
-  width: 316px;
-  height: 216px;
+  height: 200px;
   border: 8px solid #fff;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -2979,8 +2978,7 @@
 
 .ih-item.square.effect6 {
   overflow: hidden;
-  height:180px;
-  width:240px;
+  
 }
 
 .ih-item.square.effect6.colored .info {
@@ -3753,8 +3751,7 @@
 
 .ih-item.square.effect12 {
   overflow: hidden;
-   height:180px;
-   width:240px;
+   
 }
 .ih-item.square.effect12.colored .info {
   background: #1a4a72;

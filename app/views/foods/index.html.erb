@@ -32,7 +32,7 @@
 	<% @foods.each do |food| %>
 	  <div class="col-xs-3">
 	  <div class="inner-box">
-	  	<%= link_to image_tag(food.cover,size: "220x150", :alt => food.name) , food %>
+	  	<%= link_to image_tag(food.cover,size: "200x150", :alt => food.name) , food %>
 	  	
 	  	    <div class="bottom-box">                  
 	  	    <% if user_signed_in? && user_is_admin(current_user) == true %>

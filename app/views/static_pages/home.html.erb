@@ -99,7 +99,7 @@
 	  <div class="effect-box">
 	      <!-- normal -->
     <div class="ih-item square effect6 top_to_bottom"><a href="videos/<%= video.id %>">
-        <div class="img"><img  src="<%= video.cover %>"  alt="img"></div>
+        <div class="img video-img"><img  src="<%= video.cover %>"  alt="img" class="img-responsive"></div>
         <div class="info">
           <h3><%= video.title %></h3>
          
@@ -132,15 +132,15 @@
            
         </div>
         </div>
-        <div class="row">
+        <div class="row ">
 	<% ff.each do |f| %>
 	 
-	  <div class=" col-xs-3">
+	  <div class=" col-xs-3 ">
 	  
 	      <!-- normal -->
     <div class="ih-item square effect6 ">
     <a href="foods/<%= f.id %>">
-        <div class="img"><img  src="<%= f.cover %>"  alt="img"></div>
+        <div class="img"><img  src="<%= f.cover %>"  alt="img" class="img-responsive"></div>
         <div class="info">
           <h3><%= f.name %></h3>
           <p><%= f.description %></p>

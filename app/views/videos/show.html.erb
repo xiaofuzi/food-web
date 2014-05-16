@@ -1,13 +1,13 @@
 <% provide(:title,@title) %>
 
 
-
-<div class="play-box">
+<div class="row">
+<div class="play-box col-md-9">
     <h2 class="text-left">标题:<%= @video.title %></h2>
-	<embed src="<%= @video.flash %>" allowFullScreen="true" quality="    high" width="900" height="600" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+	<embed src="<%= @video.flash %>" allowFullScreen="true" quality="    high" width="860" height="580" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 	
 	
-</div>
+
 <div id="SOHUCS"></div>
  <script>
   (function(){
@@ -22,6 +22,21 @@
     h.insertBefore(s,h.firstChild);
     window.SCS_NO_IFRAME = true;
   })()
-</script>      
+</script> 
+</div>     
+<div class=" col-md-3 side-video ">
+    <% @videos.each do |v| %>
+           <div class="inner-box">
+           <% if v.id != @video.id %>
+        <%= link_to image_tag(v.cover,size: "200x150", :alt => v.title) , v %>
+        
+            <div class="bottom-box">
+                <p ><%= link_to truncate(v.title,length:20), v %></p>
+            
+            </div>
+        <% end %>
+        </div>
+       <% end %>
+</div>
  
 

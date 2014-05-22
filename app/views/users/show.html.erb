@@ -9,7 +9,7 @@
     	    <% @foods.each do |f| %>
     	    <li>
     	    <div class="col-md-8"><%= link_to truncate(f.name,length:15), f %></div><div class="col-md-2"><%= link_to "delete", f, method: :delete,
-                                  data: { confirm: "Are you sure?" } %></div><div class="col-md-2"><%= link_to "update",edit_food_path %></div></li>
+                                  data: { confirm: "Are you sure?" } %></div><div class="col-md-2"><%= link_to "update",edit_food_path(f) %></div></li>
     	   
     	    <% end %>
     	    </ol>

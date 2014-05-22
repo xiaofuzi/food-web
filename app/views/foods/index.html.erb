@@ -1,54 +1,60 @@
 <% provide(:title,'All food menus') %>
 <div class="main-box">
-<div class="row tags">
-  
-    <div  class="col-xs-1 ">
-        <p class=" btn btn-success btn-sm"><%= link_to "贵州",area_path("guizhou"),id:"tag-class" %></p>
-    </div>
-   <div class="col-xs-1">
-        <p class="btn btn-success btn-sm"><%= link_to "北京",area_path("beijing"),id:"tag-class"  %></p>
-    </div>
-    <div class="col-xs-1">
-        <p  class="btn btn-success btn-sm"><%= link_to "四川",area_path("sichuan"),id:"tag-class"  %></p>
-    </div>
-    <div class="col-xs-1 ">
-        <p class="btn btn-success btn-sm"><%= link_to "香港",area_path("xianggang"),id:"tag-class" %></p>
-    </div>
-    <div class="col-xs-1 ">
-        <p class="btn btn-success btn-sm"><%= link_to "福建",area_path("fujian"),id:"tag-class" %></p>
-    </div>
-    <div class="col-xs-1">
-        <p class="btn btn-success btn-sm"><%= link_to "陕西",area_path("shanxi") ,id:"tag-class"%></p>
-    </div>
-    <div class="col-xs-1">
-        <p class="btn btn-success btn-sm"><%= link_to "广州",area_path("guangzhou") ,id:"tag-class"%></p>
-    </div>
-    <div class="col-xs-1">
-        <p class="btn btn-success btn-sm"><%= link_to "所有地区",foods_path ,id:"tag-class"%></p>
-    </div>
+<div class="food-nav">
+        <ol class="breadcrumb">
+          <li><%= link_to "首页",root_path %></li>
+          <li><%= link_to "所有地区",foods_path %></li>
+          <li class="active"><%= @area_route %></li>
+        </ol>
 </div>
 <div class="row">
-    <div class="box">
+    <div class="box col-md-10">
 	<% @foods.each do |food| %>
 	  <div class="col-xs-3">
 	  <div class="inner-box">
-	  	<%= link_to image_tag(food.cover,size: "200x150", :alt => food.name) , food %>
-	  	
-	  	    <div class="bottom-box">                  
-	  	    <% if user_signed_in? && user_is_admin(current_user) == true %>
-	  	        <h5 ><%= link_to food.name, food%></h5>
-                <p><%= link_to "delete", food, method: :delete,
-                                  data: { confirm: "Are you sure?" } %> </p>
-            <% else %>
-                <p ><%= link_to food.name, food %></p>
-            <% end %>
-            
-            </div>
-	  	</div>
+                                <!-- normal -->
+                            <div class="ih-item square effect12 "><a href="foods/<%= food.id %>">
+                                <div class="img">
+                                        <img src="<%= food.cover %>" alt="img"  >
+                                        <p><span>地区:<%= food.area %>--</span><%=time_ago_in_words(food.created_at) %>-ago<span></span></p>
+                                </div>
+
+                                <div class="info">
+                                  <h3><%= food.name %></h3>
+                                  <p><%= food.description%></p>
+                                </div></a></div>
+                               
+                            <!-- end normal -->
+                            
 	  </div>
-	<% end %>
+	
    	</div>
+    <% end %>
+    <%= will_paginate %>
 </div>
-<%= will_paginate %>
+
+
+   <div class=" row  col-md-2 tag-box">
+        <div   class="list-group area-tags">
+        
+                <li class="list-group-item"><%= link_to "所有地区",foods_path %></li>
+              <%  @area_tags.each do |f| %>
+                      <li  class="list-group-item"><%= link_to  f.name ,area_path(f.name) %>
+                      <span class="badge"><%= f.taggings_count %></span></li>
+                <% end %>
+             
+        </div>       
+     <div >
+     <p class="label label-primary col-md-12">食谱标签：</p>
+       <% @food_tags.each do |f| %>
+       <div class="tag-cloud col-md-6 text-center">
+           <%= link_to  f.name ,area_path(f.name) %>
+          
+        </div>    
+        <% end %>
+     </div>
+   </div>
+
+         
 </div>
- 
+ </div>

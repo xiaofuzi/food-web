@@ -59,8 +59,37 @@ p {
 }
 .inner-box {
   margin: 10px 0px 0px 20px;
+  height:220px;
+  width :200px;
+}
+.inner-box .img{
+   height:70%;
+   width:100%;  
 }
 
+.inner-box-single {
+  height: 120;
+  width:150;
+}
+.inner-box-single .img{
+    height:auto;
+   width:100%;
+    }
+
+  .video-inner-box {
+  margin: 10px 0px 50px 20px;
+  height:150px;
+  width :250px;
+}  
+
+.video-inner-box .img{
+   height:100%;
+   width:100%;  
+}
+
+.video-box {
+  margin: 0 20px 0 -20px;
+}
 .bottom-box {
   margin: 5px;
   height: 50px;
@@ -81,11 +110,17 @@ p {
 }
 
 .foot-box {
-  background-color: #4EEE94;
-  
+  background-color: rgba(0, 0, 0, 0.2);
+  margin:0 0 -50px 0;
   padding: 25px 0 0 0;
+  link-color:black;
 }
-
+a.foot-box{
+      color: black;
+      &:hover {
+         color: gray;
+       }
+     }
 .flash {
   margin:60px 0 -40px 0;
 
@@ -198,7 +233,7 @@ color: white;
 /*tags css*/
 #tag-class {
     
-    color:white;
+    link-color:white;
     }
    
 .tags {
@@ -216,4 +251,47 @@ img {
 
 .video-img {
   height:180px;
+}
+
+
+
+.food-nav {
+  margin:-30px 0 -10px -15px;
+}
+.tag-box{
+  margin:0 ;
+}
+.nav-video{
+  margin:-30px 0 -10px 0px;
+}
+.area-tags:hover {
+  background-color:rgba(128, 128, 128, 0.2);
+}
+.tag-cloud{
+  background-color:white;
+  border-radius: 30px;
+  margin:3px 0px 3px 0;
+  padding:3px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.07);
+}
+.tag-cloud:hover {
+  background-color:rgba(128, 128, 128, 0.2);
+}
+
+
+.help-page {
+  
+}
+.table-view {
+  padding-top: 10px;
+  background-color: white;
+}
+
+.footer-nav {
+  margin-top: -25px;
+}
+
+.about-page {
+  background-color: white;
+  height:600px;
 }

@@ -1,33 +1,30 @@
-<% provide(:title,"Update a food menu") %>
+<% provide(:title,"Create a food menu") %>
 <div class="main-box">
-<h1> 食谱信息更改 </h1>
+<h1> 食谱创建</h1>
 <div class="row">
 	<div class="col-md-offset-4 col-md-4">
+	
 		<%= form_for(@food) do |v| %>
 
-		  
-         
-           <div class="input-group">
-		   <span class="input-group-addon"><%= v.label :食谱名称 %></span>
-		   <%= v.text_field :name ,class:"form-control"%>
+		 
+          <div class="input-group">
+		   <span class="input-group-addon"><%= v.label :食谱名称%></span>
+		   <%= v.text_field :name ,class:"form-control",:placeholder => "食谱名称"%>
            </div>
            
 		   <div class="input-group">
 		   <span class="input-group-addon"><%= v.label :省市地区 %></span>
-		   <%= v.text_field :area,class:"form-control" %>
+		   <%= v.text_field :area,class:"form-control",:placeholder => "贵州，四川，北京（多个标签用逗号分隔）" %>
            </div>
-           <div class="input-group">
-		   <span class="input-group-addon"><%= v.label :食谱标签 %></span>
-		   <%= v.text_field :tag,class:"form-control",:placeholder => "（多个标签用逗号分隔）" %>
-           </div>
+          
 		   <div class="input-group">
 		   <span class="input-group-addon"><%= v.label :插图链接 %></span>
-		   <%= v.text_field :cover,class:"form-control" %>
+		   <%= v.text_field :cover,class:"form-control",:placeholder => "插图图片网址" %>
            </div>
-           <div>
+           
 		   <div class="input-group">
 		   <span class="input-group-addon"><%= v.label :描述信息 %></span>
-		   <%= v.text_field :description ,class:"form-control"%>
+		   <%= v.text_field :description ,class:"form-control",:placeholder => "对食谱的描述信息"%>
            </div>
            <div>
 		   <%= v.label :制作说明 %><br />
@@ -36,9 +33,12 @@
            </div><br />
          
            <div class="center">
-		   <%= v.submit "Update a food menu", class: "btn  btn-primary" %>
+		   <%= v.submit "Create a food menu", class: "btn  btn-primary" %>
 		   </div>
+		  
 		<% end %>
+	
 	</div>
 </div>
 </div>
+

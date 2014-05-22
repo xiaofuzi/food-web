@@ -1,6 +1,6 @@
 class Food < ActiveRecord::Base
 	
-	acts_as_taggable_on :areas
+	acts_as_taggable_on :areas,:tags
 	#acts_as_taggable_on :tags
 	belongs_to :user
     #attr_accessible :tag_list

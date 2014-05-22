@@ -3,9 +3,9 @@
 <div class="col-md-2 about-page ">
          <div class="bc-sidebar">
           <ul class="nav  navbar-text nav-list bc-sidenav">
-            <li><a href="#about-us">关于食遇天下</a></li>
-            <li><a href="#member-show">制作成员介绍</a></li>
-            <li><a href="#contact">联系我们</a></li>
+            <li><a href="#food-menu">什么是食谱？</a></li>
+            <li><a href="#how-created">如何创建食谱和视频？</a></li>
+            <li><a href="#other-problem">其他问题？</a></li>
            
           </ul>
         </div>
@@ -85,3 +85,5 @@
 <script>
   $('body').scrollspy({ target: '.navbar-example' })
 </script>
+
+

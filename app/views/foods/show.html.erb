@@ -1,6 +1,6 @@
 <div class="main-box">
     <div class="row">
-        <div class= "col-md-8">
+        <div class= "col-md-9">
 	        <div ><h1 class="text-left"><%= @food.name %></h1></div>
 	        <% if @food.user!= nil %>
           <div class="btn btn-success">用户名:<%= @food.user.user_name %></div>
@@ -36,7 +36,7 @@
 	
         </div>
         </div>
-   <div class="col-md-4">
+   <div class="col-md-3">
    	   <% @foods.each do |food| %>
    	       <div class="inner-box-single">
    	       <% if food.id != @food.id %>

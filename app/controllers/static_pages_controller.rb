@@ -18,7 +18,7 @@ class StaticPagesController < ApplicationController
   end
 
   def help
-    render :layout => false
+   
   end
 
   def about

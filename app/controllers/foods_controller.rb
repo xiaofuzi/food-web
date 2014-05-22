@@ -28,8 +28,8 @@ class FoodsController < ApplicationController
 		     @food.user_id = current_user.id
 		  end
       @food.area_list.add(@food.area)
-      tag_arry = @food.tag.split(",")
-      @food.tag_list.add(tag_arry ) 
+      @tag_arry = @food.tag.split(",")
+      @food.tag_list.add(@tag_arry ) 
       
 		if @food.save
 			redirect_to root_path

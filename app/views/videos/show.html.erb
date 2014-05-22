@@ -26,16 +26,18 @@
 </div>     
 <div class=" col-md-3 side-video ">
     <% @videos.each do |v| %>
-           <div class="inner-box">
+           
            <% if v.id != @video.id %>
+           <div class="inner-box">
         <%= link_to image_tag(v.cover,size: "200x150", :alt => v.title) , v %>
         
             <div class="bottom-box">
                 <p ><%= link_to truncate(v.title,length:20), v %></p>
             
             </div>
+            </div>
         <% end %>
-        </div>
+        
        <% end %>
 </div>
  

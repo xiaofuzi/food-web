@@ -21,36 +21,3 @@
 
 
 
-<div class="nav-video">
-        <ol class="breadcrumb">
-          <li><%= link_to "首页",root_path %></li>
-          <li><%= link_to "视频",videos_path %></li>
-         
-        </ol>
-
-</div>
-
-    <div class="video-box">
-      <% @videos.each do |video| %>
-     <div class="col-md-3">
-     <div class="video-inner-box">
-      
-                          <!-- normal -->
-                            <div class="ih-item square effect3 bottom_to_top"><a href="videos/<%= video.id %>">
-                                <div class="img">
-                                        <img src="<%= video.cover %>" alt="<%= video.title %>"  >
-                                        
-                                </div>
-
-                                <div class="info">
-                                  <h3><%= video.title %></h3>
-                                  <p><%= video.created_at %></p>
-                                </div></a></div>
-                             
-                            <!-- end normal -->
-            </div>
-    </div>
-  <% end %>
-    </div>
-   <%= will_paginate %>
-   <p>corporate site:www.youku.com,www.tudou.com</p>

@@ -179,10 +179,10 @@ body{
 .carousel-inner > .item > img{ width:820px; height:500px; }
 
 .update-box {
-    background-color: #E6E6FA;
+    background-color: white;
     border-radius: 3px;
     box-shadow: 0 0 2px gray;
-    margin: 0 0 20px 0px;
+    margin: 0 0px 20px 0px;
     padding: 10px;
 }
 .user-show-box {
@@ -194,7 +194,7 @@ body{
 /* set the background-color to red */
 .navbar-inner
 {
-background-color: #7fb80e;
+background-color: rgba(69, 134 ,0, 0.8);
 /* remove the gradient */
 background-image: none;
 /* set font color to white */
@@ -205,11 +205,11 @@ color: white;
 
 /* set the background of the menu items to pink and default color to white */
 .navbar {
-  background-color: #7fb80e;
+  background-color: rgba(0, 255, 0, 0.02);
   background-image: none;
 }
 .navbar .nav > li > a {
-background-color: green;
+background-color: #7fb80e;
 color: white;
 
 }
